@@ -1,0 +1,93 @@
+//
+   Created by seonaid on 14-12-01.
+extends layout
+
+block content
+    // This navigation bar will be dynamically generated depending on where we are on the site
+        .heading
+          .underlay
+            a(href="http://127.0.0.1:3000"): h1#homepage Nerdique
+            p: a(href="http://127.0.0.1:3000/login") My Account | Register
+    .carousel.slide#myCarousel(data-ride="carousel")
+        //<!-- Indicators
+        ol.carousel-indicators
+            li.active(data-target="#myCarousel", data-slide-to="0")
+            li(data-target="#myCarousel", data-slide-to="1")
+            li(data-target="#myCarousel", data-slide-to="2")
+        .carousel-inner(role="listbox")
+            .item.active
+                img(src="/images/tree_attack.jpg", alt="Second slide")
+                .container
+                    .carousel-caption
+                        h1 Use Your Powers for Awesome.
+                        p Nerdique makes it easy to meet the people who share your passions.
+                        p: a.btn.btn-lg.btn-primary(href="#",role="button") Learn More
+            .item
+                img(src="/images/event_splash.jpg", alt="First slide")
+                .container
+                    .carousel-caption
+                        h1 Plan your Year.
+                        p Deadlines for the leading conventions gathered into a single calendar
+                        p: a.btn.btn-lg.btn-primary(href="#",role="button") See What's Happening
+            .item
+                img(src="/images/find_one_another.jpg", alt="Third slide")
+                .container
+                    .carousel-caption
+                        h1 Make connections.
+                        p Reach across the distance to find your sympatico folk
+                        p: a.btn.btn-lg.btn-primary(href="http://127.0.0.1:3000/login",role="button") Sign Up
+        a.left.carousel-control(href="#myCarousel", role="button", data-slide="prev")
+            span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
+            span.sr-only Previous
+        a.right.carousel-control(href="#myCarousel", role="button", data-slide="next")
+            span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
+            span.sr-only Next
+    //<!-- Marketing messaging and featurettes
+       ==================================================
+       <!-- Wrap the rest of the page in another container to center all the content.
+    .container.marketing
+        //<!-- Three columns of text below the carousel
+        .row
+            .col-lg-4
+                .headline
+                    img.img-circle(src="/images/catan_game.jpg", alt="Generic placeholder image", style="width: 140px; height: 140px;")
+                    h2 I Met the Coolest People!
+                    p Our approach is centred on community. We make it easy to meet people who share your interests, and give you the opporunity to contribute to their growth. From board games to permaculture, historic recreations to science fiction, our communities are growing daily.
+                    p: a.btn.btn-default(href="#", role="button") View details &raquo;
+            .col-lg-4
+                .headline
+                    img.img-circle(src="/images/rocket.jpg", alt="Generic placeholder image", style="width: 140px; height: 140px;")
+                    h2 Oh, oh! Let me try!
+                    p One of the greatest challenges for small events is gathering the resources for planning into a single location. We have event planning features built in, and can help you with registration and payments.
+                    p: a.btn.btn-default(href="#", role="button") Coming soon &raquo;
+            .col-lg-4
+                .headline
+                    img.img-circle(src="/images/imgres-2.jpg", alt="Generic placeholder image", style="width: 140px; height: 140px;")
+                    h2 It must be MINE!
+                    p A marketplace that specializes in awesome stuff made by awesome people.
+                    p: a.btn.btn-default(href="#", role="button") Coming soon &raquo;
+        //<!-- START THE FEATURETTES
+        hr.featurette-divider
+        .row.featurette
+            .col-md-7
+                h2.featurette-heading A Community of Communities.
+                    span.text-muted Find your people.
+                p.leadDonec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+            .col-md-5
+                img.featurette-image.img-responsive(data-src="holder.js/500x500/auto", alt="Generic placeholder image")
+        hr.featurette-divider
+        .row.featurette
+            .col-md-5
+                img.featurette-image.img-responsive(data-src="holder.js/500x500/auto", alt="Generic placeholder image")
+            .col-md-7
+                h2.featurette-heading Artist of the Week.
+                    span.text-muted See for yourself.
+                p.leadDonec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+        hr.featurette-divider
+        .row.featurette
+            .col-md-7
+                h2.featurette-heading.text-muted We'd love to have you.
+                p.leadDonec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+            .col-md-5
+                img.featurette-image.img-responsive(data-src="holder.js/500x500/auto", alt="Generic placeholder image")
+        hr.featurette-divider

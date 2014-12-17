@@ -1,0 +1,31 @@
+//
+   Created by seonaid on 14-11-27.
+extends layout
+
+block navigation
+   .nav.group
+      ul
+         li#selected Home
+         a(href="http://127.0.0.1:3000/boardgames/"): li Communities
+         li Events
+         li Marketplace
+         li About
+         .search
+            input#search(type="text", placeholder="Search")
+            input(type="submit", value="Submit")
+
+block content
+   .matting
+      .container
+         .top-section
+            .hidden#messageInput
+               p#msgDescription What do you have to say for yourself?
+               p: input#m(type="text", placeholder="Say it, sister.")
+               .button Send now
+         h1 Here shall we chat!
+
+         .main-section
+            .sidebar#chatlist Currently here:
+            .wideSide.hidden#messages
+               ul
+

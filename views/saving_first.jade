@@ -1,0 +1,43 @@
+//
+   Created by seonaid on 14-12-02.
+
+block content
+   .row
+      .col-md-5
+         .communities
+            a(href="http://127.0.0.1:3000/communities/"): h2 Join a Community
+            .greyout.group
+               a.button(href="/communities") See All
+               p For geeks of all trades
+               .image
+                  a(href="/category"): img(src="/images/boardgame_front.jpeg", id="board_th")
+                  .overlay.hidden Board Games
+               .image
+                  img(src="/images/Lucca2007_cosplay.jpg", id="cos_th")
+                  .overlay.hidden CosPlay
+               .image
+                  img(src="/images/scifi.jpeg")
+                  .overlay.hidden Science Fiction
+               .image
+                  img(src="/images/permie-thumb.jpg")
+                  .overlay.hidden Permaculture
+               .image
+                  img(src="/images/tinyhouse-thumb.jpg")
+                  .overlay.hidden Tiny Houses
+
+      .col-md-7
+         h2 Plan Your Year
+         .row.events
+            .col-md-6
+               img.img-responsive#event_image(src="/images/Montreal_Comiccon_2011_Dealers_Room_View_1.jpg")
+               .overlay Montreal ComicCon 2011
+            .col-md-5
+               p Keep track of major events in our Nerd Year Planner.
+               p Create a private community to plan your own event.
+         .row.marketplace
+            h2 Shop Our Makers Market
+            .col-md-5
+               img.img-responsive(src="/images/imgres-2.jpg")
+            .col-md-5
+               p From handmade cloaks to indie comic books,
+                  |steampunk jewellery to crocheted Cthulus... our makers have you covered

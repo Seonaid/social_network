@@ -1,0 +1,82 @@
+//
+   Created by seonaid on 14-11-28.
+
+extends layout
+
+block extraHead
+   link(rel="stylesheet", href="/stylesheets/offcanvas.css")
+
+block content
+   .container
+      .row.row-offcanvas.row-offcanvas-right
+         .col-xs-12.col-md-12
+            .jumbotron
+               h1 Find your folks!
+               p At Nerdique, community lies at the core. Here you will find a wide range of activities and interests, each of which has a group of dedicated writers and participants. Browse, search, read and explore to your heart's content. And when you decide you simply must jump in, we'll be pleased to meet you.
+            .row
+               .col-xs-6.col-lg-4
+                  h2 Heading
+                  img.img-responsive(src="/images/board-thumb.jpeg")
+                  p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                  p: a.btn.btn-default(href="#", role="button") View Details
+               .col-xs-6.col-lg-4
+                  h2 Heading
+                  img.img-responsive(src="/images/lotro-thumb.jpg")
+                  p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                  p: a.btn.btn-default(href="#", role="button") View Details
+               .col-xs-6.col-lg-4
+                  h2 Heading
+                  img.img-responsive(src="/images/permie-thumb.jpg")
+                  p When you need to get away from the computer and reconnect with the earth, the permie community has just what you need.
+                  p: a.btn.btn-default(href="#", role="button") View Details
+               .col-xs-6.col-lg-4
+                  h2 Heading
+                  p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                  p: a.btn.btn-default(href="#", role="button") View Details
+               .col-xs-6.col-lg-4
+                  h2 Heading
+                  p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                  p: a.btn.btn-default(href="#", role="button") View Details
+               .col-xs-6.col-lg-4
+                  h2 Heading
+                  p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                  p: a.btn.btn-default(href="#", role="button") View Details
+
+block navigation
+   .nav.group
+      ul
+         a(href="http://127.0.0.1:3000/"): li Home
+         a(href="http://127.0.0.1:3000/communities/"): li#selected Communities
+         li Events
+         li Marketplace
+         li About
+         div#search
+            input(type="text", id="#searchfield", placeholder="Search")
+            .button#searchbutton Submit
+
+   h2 Find Your People
+   // starting with layout using bootstrap out of the gate. Which is why I'm working on this page now.
+   .category-grid
+      .row
+         .col-md-2
+            img.img-responsive(src="/images/board-thumb.jpeg")
+         .col-md-2
+            p We love board games. Reviews, hangouts, and the chance to meet new players for your next boardgame night.
+            p
+               button.btn.btn-primary.btn-xs.pull-right(type="button") Join
+
+         .col-md-2
+            img.img-responsive(src="/images/lotro-thumb.jpg")
+         .col-md-2
+            p Witty text about how LOTRO rocks. Write, write, write...
+               | Something else goes here.
+            p
+               button.btn.btn-primary.btn-xs.pull-right(type="button") Join
+         .col-md-2
+            img.img-responsive(src="/images/permie-thumb.jpg")
+         .col-md-2
+            p
+               button.btn.btn-primary.btn-xs.pull-right(type="button") Join
+      .row
+         .col-md-6
+            p This part should span half the page and be so completely compelling that everybody yells, "Shut up and take my money!". No pressure, copy writers.

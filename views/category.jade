@@ -1,0 +1,29 @@
+//
+   Created by seonaid on 14-11-25.
+extends layout
+
+block navigation
+   .nav.group
+      ul
+         a(href="http://127.0.0.1:3000"): li Home
+         a(href="http://127.0.0.1:3000/boardgames/"): li#selected Communities
+         li Events
+         li Marketplace
+         li About
+         .search
+            input#search(type="text", placeholder="Search")
+            input(type="submit", value="Submit")
+
+block content
+   .members
+      h2 Members
+      ul
+         li Person 1
+         li Person 2
+         li Person 3
+   .reviews
+      h2 Reviews
+      p This is where we will put reviews
+   .events
+      h2 Coming Soon
+      p A calendar goes here

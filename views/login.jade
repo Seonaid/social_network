@@ -1,0 +1,24 @@
+//
+   Created by seonaid on 14-11-24.
+extends layout
+block extraHead
+   link(rel="stylesheet", href="/stylesheets/offcanvas.css")
+
+block content
+   .container
+      .login.group
+         h2 Join the Conversation!
+         #userCheck
+            label Username:
+            input#username(name="username")
+            #response
+         div
+            p
+               label Password:
+               input#password(type = "password", name="password")
+            p
+               button.btn-default.pull-right Log In
+               button.btn-default.hidden Register
+
+         a#register-link(href = "#") I don't have an account.
+         a.hidden#login-link(href = "#") I have an account already.

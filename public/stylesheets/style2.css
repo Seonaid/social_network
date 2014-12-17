@@ -1,0 +1,50 @@
+@font-face {
+    font-family: romance-fatal;
+    src: url('../fonts/romance_fatal_serif/romance_fatal.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: sans-PT;
+    src: url('../fonts/PT-Sans/PTN57F.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: arvo;
+    src: url('../fonts/arvo/Arvo-Regular.ttf') format('truetype');
+}
+
+body{
+    background-color: #67b168;
+    font-family: arvo, serif;
+}
+
+.navbar{
+    background-color: #555555;
+}
+
+.carousel-caption{
+    background-color: rgba(0,0,0,0.45);
+}
+
+h1, .navbar-brand{
+    font-family: romance-fatal, serif;
+}
+
+h2{
+    font-family: sans-PT, Helvetica, sans-serif;
+}
+
+.headline, .featurette{
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px 10px 15px 10px;
+    background-color: snow;
+}
+
+.login{
+    width: 50%;
+    margin: 0 auto;
+    background-color: snow;
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+}
