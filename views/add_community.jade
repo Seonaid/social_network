@@ -1,0 +1,18 @@
+//
+   Created by seonaid on 14-12-18.
+
+extends layout
+
+block content
+   h1 Add Community
+   p This is a page for the back end.
+
+   h2 Creating a new Community
+   form(action="/communities/create", method = "post")
+      p Name
+         input(type="text", name = "community_name")
+      p Image
+         input(type="text" name = "featured_image")
+      p Description
+         textarea(name="description", rows="10", cols="50")
+      input(type="submit")

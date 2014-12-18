@@ -14,7 +14,7 @@ router
         });
       });
     })
-
+// This will dynamically generate the communities page once I put the content in the database
     .get('/communities', function(req, res) {
       models.Community.findAll({
         include: [models.Alias]

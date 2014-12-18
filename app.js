@@ -28,7 +28,7 @@ app.use('/', routes);
 
 // *** I suspect I'll have to revisit routes when we have more nesting. I think that this won't work for /users/seonaid, for example.
 
-app.use('/users', users);
+app.use('/users', users); //currently this just adds a "user" to table "users" ala the sequelize tutorial. May be redundant w/ socket.io
 app.use('/communities', communities);
 
 // catch 404 and forward to error handler
