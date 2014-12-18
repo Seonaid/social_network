@@ -28,6 +28,11 @@ body{
 
 h1, .navbar-brand{
     font-family: romance-fatal, serif;
+    font-size: 32px;
+}
+.navbar-brand > .active > a{
+    color: #fff;
+    background-color: #080808;
 }
 
 h2{

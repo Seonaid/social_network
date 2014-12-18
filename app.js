@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var communities = require('./routes/communities');
 
 var app = express();
 
@@ -28,6 +29,7 @@ app.use('/', routes);
 // *** I suspect I'll have to revisit routes when we have more nesting. I think that this won't work for /users/seonaid, for example.
 
 app.use('/users', users);
+app.use('/communities', communities);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

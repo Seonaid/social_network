@@ -14,7 +14,7 @@ router
       })
 
 
-    .get('/:name', function(req, res){
+    .get('/users/:name', function(req, res){
       response.send('Show the page for a user! If they exist. Otherwise, send an error. Code to come later.')
     });
 
