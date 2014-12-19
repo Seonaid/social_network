@@ -6,34 +6,7 @@ extends layout
 block extraHead
    link(rel="stylesheet", href="/stylesheets/offcanvas.css")
 block navigation
-   .navbar-wrapper
-      .container
-         nav.navbar.navbar-inverse.navbar-static-top
-            .container
-               .navbar-header
-                  button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#navbar", aria-expanded="false", aria-controls="navbar")
-                     span.sr-only Toggle navigation
-                     span.icon-bar
-                     span.icon-bar
-                     span.icon-bar
-                  a.navbar-brand(href="http://127.0.0.1:3000") Nerdique
-               .navbar-collapse.collapse#navbar
-                  ul.nav.navbar-nav
-                     li.active: a(href="http://127.0.0.1:3000/communities") Communities
-                     li.dropdown
-                        a.dropdown-toggle(href="#", data-toggle="dropdown",  role="button", aria-expanded="false") Events
-                           span.caret
-                           ul.dropdown-menu(role="menu")
-                              li: a(href="") Action
-                              li: a(href="") Another action
-                              li: a(href="") Something else here
-                              li.divider
-                              li.dropdown-header Nav header
-                              li: a(href="") Separated link
-                              li: a(href="") One more separated link
-                     li: a(href="#about") Marketplace
-                     li: a(href="#contact") Contact
-                     li: p.pull-right: a(href="http://127.0.0.1:3000/login") My Account | Register
+
 
 block content
    .container
@@ -49,34 +22,23 @@ block content
                   img.img-responsive(src="" + community.featured_image)
                   p= community.description
                   p: a.btn.btn-default(href="#", role="button") View Details
-               .col-xs-6.col-lg-4
-                  h2 Heading
-                  img.img-responsive(src="/images/lotro-thumb.jpg")
-                  p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-                  p: a.btn.btn-default(href="#", role="button") View Details
-               .col-xs-6.col-lg-4
-                  h2 Heading
-                  img.img-responsive(src="/images/permie-thumb.jpg")
-                  p When you need to get away from the computer and reconnect with the earth, the permie community has just what you need.
-                  p: a.btn.btn-default(href="#", role="button") View Details
-               .col-xs-6.col-lg-4
-                  h2 Heading
-                  p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-                  p: a.btn.btn-default(href="#", role="button") View Details
-               .col-xs-6.col-lg-4
-                  h2 Heading
-                  p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-                  p: a.btn.btn-default(href="#", role="button") View Details
-               .col-xs-6.col-lg-4
-                  h2 Heading
-                  p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-                  p: a.btn.btn-default(href="#", role="button") View Details
+            .col-xs-6.col-lg-4
+               h2 Heading
+               img.img-responsive(src="/images/lotro-thumb.jpg")
+               p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+               p: a.btn.btn-default(href="#", role="button") View Details
+            .col-xs-6.col-lg-4
+               h2 Heading
+               img.img-responsive(src="/images/permie-thumb.jpg")
+               p When you need to get away from the computer and reconnect with the earth, the permie community has just what you need.
+               p: a.btn.btn-default(href="#", role="button") View Details
+
 
 block older
    .nav.group
       ul
-         a(href="http://127.0.0.1:3000/"): li Home
-         a(href="http://127.0.0.1:3000/communities/"): li#selected Communities
+         a(href="/"): li Home
+         a(href="/communities/"): li#selected Communities
          li Events
          li Marketplace
          li About
