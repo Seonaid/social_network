@@ -5,7 +5,7 @@ var path      = require("path");
 //var Sequelize = require("sequelize");
 var env       = process.env.NODE_ENV || "development";
 var Sequelize = require('sequelize')
-    , sequelize = new Sequelize('nerdique', 'seonaid', 'arbitrary',{
+    , sequelize = new Sequelize('nerdique', 'seonaid', '',{
       dialect: "postgres",
       port: 5432,
     })
