@@ -16,22 +16,22 @@ block content
                h1 Find your folks!
                p At Nerdique, community lies at the core. Here you will find a wide range of activities and interests, each of which has a group of dedicated writers and participants. Browse, search, read and explore to your heart's content. And when you decide you simply must jump in, we'll be pleased to meet you.
             .row
-            each community in communities
-               .col-xs-6.col-lg-4
-                  h2= community.community_name
-                  img.img-responsive(src="" + community.featured_image)
-                  p= community.description
+               each community in communities
+                  .col-xs-6.col-lg-4.community_overview
+                     h2= community.community_name
+                     img.img-responsive(src="" + community.featured_image)
+                     p= community.description
+                     p: a.btn.btn-default(href="#", role="button") View Details
+               .col-xs-6.col-lg-4.community_overview
+                  h2 Heading
+                  img.img-responsive(src="/images/lotro-thumb.jpg")
+                  p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
                   p: a.btn.btn-default(href="#", role="button") View Details
-            .col-xs-6.col-lg-4
-               h2 Heading
-               img.img-responsive(src="/images/lotro-thumb.jpg")
-               p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-               p: a.btn.btn-default(href="#", role="button") View Details
-            .col-xs-6.col-lg-4
-               h2 Heading
-               img.img-responsive(src="/images/permie-thumb.jpg")
-               p When you need to get away from the computer and reconnect with the earth, the permie community has just what you need.
-               p: a.btn.btn-default(href="#", role="button") View Details
+               .col-xs-6.col-lg-4.community_overview
+                  h2 Heading
+                  img.img-responsive(src="/images/permie-thumb.jpg")
+                  p When you need to get away from the computer and reconnect with the earth, the permie community has just what you need.
+                  p: a.btn.btn-default(href="#", role="button") View Details
 
 
 block older
