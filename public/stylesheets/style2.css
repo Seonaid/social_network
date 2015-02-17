@@ -56,4 +56,10 @@ h2{
 
 .community_overview{
     height: 420px;
+    background-color: linen;
+    margin: 8px, 8px, 8px, 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15 px;
+
 }

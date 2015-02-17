@@ -2,17 +2,25 @@
    Created by seonaid on 14-12-18.
 
 extends layout
-
+block extraHead
+   link(rel="stylesheet", href="/stylesheets/offcanvas.css")
 block content
-   h1 Add Community
-   p This is a page for the back end.
-
-   h2 Creating a new Community
-   form(action="/communities/create", method = "post")
-      p Name
-         input(type="text", name = "community_name")
-      p Image
-         input(type="text" name = "featured_image")
-      p Description
-         textarea(name="description", rows="10", cols="50")
-      input(type="submit")
+   .container
+      .row.row-offcanvas.row-offcanvas-right
+         .col-xs-12.col-md-12
+            .jumbotron
+               h1 Add Community
+               p This is a page for the back end.
+            .row
+               .col-xs-8.col-lg-6
+                  .community_overview
+                     h2 Creating a new Community
+                     form(action="/communities/create", method = "post")
+                        p Name:
+                           input(type="text", name = "community_name")
+                        p Image:
+                           input(type="text", name = "featured_image")
+                           input(type="button", value = "Upload from Computer")
+                        p Description:
+                           textarea(name="description", rows="10", cols="50")
+                        input(type="submit")
