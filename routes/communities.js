@@ -38,12 +38,13 @@ router
      */
 
     .post('/create', parseUrlencoded, multer(), validatePhoto, function(request, response) {
-        console.log(request.files);
+        console.log(request.files.featured_image.originalname);
+
         var newCommunity = request.body;
         models.Community.create({
             community_name: newCommunity.community_name,
             description: newCommunity.description,
-            featured_image: newCommunity.featured_image
+            featured_image: '/images/' + request.files.featured_image.name
         }).success(function(community){
             response.send('added ' + community.community_name + ' to the database')});
     });
