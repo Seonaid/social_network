@@ -15,20 +15,6 @@ router
       });
     })
 
-// This will dynamically generate the communities page once I put the content in the database
-    .get('/communities', function(req, res) {
-      models.Community.findAll({
-        include: [models.Alias]
-      }).then(function(communities){
-        res.render('communities',{
-          title: 'Nerdique Communities',
-          communities: communities
-        });
-        console.log('From the communities route in index');
-      });
-
-    })
-
     .get('/register', function(req, res){
         res.render('register');
     })
@@ -36,11 +22,18 @@ router
 // Handle logins
     .post('/login', function(req, res){
         var password = req.body.password;
+        var redirect = req.body.redirect;
         console.log(password);
         console.log('logging in with ' + JSON.stringify(req.session));
         if(password === "I4BHIoeXobce") {
             req.session.username  = req.body.username;
-            res.render('success');
+            if(redirect){
+                console.log("redirecting to " + redirect);
+                res.render(redirect);
+            } else{
+                res.render('success');
+            }
+
         } else {
             res.render('failure');
         }
@@ -61,7 +54,7 @@ router
         if(req.session.username) {
             res.render(req.params.name, {title: 'Nerdique'});
         } else {
-            res.render('login');
+            res.render('login',  {redirect: req.params.name});
         }
     });
 
