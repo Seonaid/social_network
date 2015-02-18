@@ -15,6 +15,7 @@ block content
             .jumbotron
                h1 Find your folks!
                p At Nerdique, community lies at the core. Here you will find a wide range of activities and interests, each of which has a group of dedicated writers and participants. Browse, search, read and explore to your heart's content. And when you decide you simply must jump in, we'll be pleased to meet you.
+               button.btn.btn-default.pull-right: a(href="/communities/add") Add Community
             .row
                each community in communities
                   .col-xs-6.col-lg-4
@@ -23,8 +24,6 @@ block content
                         img.img-responsive(src="" + community.featured_image)
                         p= community.description
                         p: a.btn.btn-default(href="#", role="button") View Details
-
-
 block older
    .nav.group
       ul
