@@ -16,9 +16,18 @@ router.use(expressValidator());
 router.use(multer({dest: 'public/images/'}));
 
 router
- /*   .get('/communities', function(req, res){
-        response.render('communities');
-        console.log('From the communities route file');
+/* This will dynamically generate the communities page once I put the content in the database
+    .get('/', function(req, res) {
+        models.Community.findAll({
+            include: [models.Alias]
+        }).then(function(communities){
+            res.render('communities',{
+                title: 'Nerdique Communities',
+                communities: communities
+            });
+            console.log('From the / route in communities');
+        });
+
     }) */
 
 
@@ -37,7 +46,14 @@ router
  buffer: null } }
      */
 
-    .post('/create', parseUrlencoded, multer(), validatePhoto, function(request, response) {
+    .get('/add', function(request, response){
+        console.log('rendering add_community page');
+        response.render('add_community', {
+            title: 'Nerdique'
+        });
+    })
+
+    .post('/add', parseUrlencoded, multer(), validatePhoto, function(request, response) {
         console.log(request.files.featured_image.originalname);
 
         var newCommunity = request.body;
@@ -45,6 +61,7 @@ router
             community_name: newCommunity.community_name,
             description: newCommunity.description,
             featured_image: '/images/' + request.files.featured_image.name
+            // at the moment, it is that long name up above.
         }).success(function(community){
             response.send('added ' + community.community_name + ' to the database')});
     });

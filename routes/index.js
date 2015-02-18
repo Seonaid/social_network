@@ -14,6 +14,7 @@ router
         });
       });
     })
+
 // This will dynamically generate the communities page once I put the content in the database
     .get('/communities', function(req, res) {
       models.Community.findAll({
@@ -63,11 +64,5 @@ router
             res.render('login');
         }
     });
-
-// anything else
-//
-//    .get('/:socks', function(req,res){
-//      res.render(req.params.socks, {title: 'Nerdique'});
-//    });
 
 module.exports = router;

@@ -7,14 +7,25 @@ var models = require('../models');
 
 /*  users listing. */
 router
-    .post('/create', parseUrlencoded, function(request, response) {
+
+    .get('/', function(request, response){
+        response.send('this would be a grand list of users');
+    })
+
+    .get('/add', function(request,response){
+        response.render('register', {
+            title: 'Nerdique'
+        });
+    })
+
+    .post('/add', parseUrlencoded, function(request, response) {
       var newUser = request.body;
       models.User.create({username: newUser.username}).success(function(user){
         response.send('added ' + user.username + ' to the database')});
       })
 
 
-    .get('/users/:name', function(req, res){
+    .get('/:name', function(request, response){
       response.send('Show the page for a user! If they exist. Otherwise, send an error. Code to come later.')
     });
 
