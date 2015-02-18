@@ -12,7 +12,7 @@ var multer = require('multer');
 /*  communities listing. */
 
 router.use(expressValidator());
-router.use(multer({dest: '../public/images/'}));
+router.use(multer({dest: './public/images/'}));
 
 router
     // This dynamically generates the communities page from entries in the database. It is visible without being logged in.
