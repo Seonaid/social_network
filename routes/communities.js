@@ -29,22 +29,6 @@ router
 
     })
 
-//  Here I need to figure out how to make a readable name for the uploaded file and put it in the database.
-/* request.files looks like this:
- { featured_image:
- { fieldname: 'featured_image',
- originalname: 'IMG_0452.JPG',
- name: '661beb53327de00d88cdf9c57abf8e43.JPG',
- encoding: '7bit',
- mimetype: 'image/jpeg',
- path: 'public/images/661beb53327de00d88cdf9c57abf8e43.JPG',
- extension: 'JPG',
- size: 941546,
- truncated: false,
- buffer: null } }
-     */
-
-
     .get('/add', function(request, response){
         console.log('rendering add_community page');
         if(request.session.username) {
@@ -56,8 +40,7 @@ router
     })
 
     .post('/add', parseUrlencoded, multer(), validatePhoto, function(request, response) {
-        console.log(request.files.featured_image.originalname);
-
+        console.log('adding community');
         var newCommunity = request.body;
         models.Community.create({
             community_name: newCommunity.community_name,

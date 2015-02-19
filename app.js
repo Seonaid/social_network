@@ -6,9 +6,11 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var expressSession = require('express-session');
 
+
 var users = require('./routes/users');
 var communities = require('./routes/communities');
 var routes = require('./routes/index');
+var api = require('./routes/api')
 
 var app = express();
 
@@ -32,6 +34,7 @@ app.use(expressSession({secret: 'supersecrettoken_replace'}));
 
 app.use('/users', users); //currently this just adds a "user" to table "users" ala the sequelize tutorial. May be redundant w/ socket.io
 app.use('/communities', communities);
+app.use('/api', api);
 
 app.use('/', routes);
 
